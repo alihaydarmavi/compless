@@ -8,9 +8,8 @@
 
 ## To-Do
 
-- [.] Creating a roadmap
-- [ ] Tokenizer
-- [ ] Lexer
+- [x] Creating a roadmap
+- [/] Tokenizer/Lexer
 - [ ] Parser
 - [ ] Semantic Analyzer
 - [ ] Optimization
