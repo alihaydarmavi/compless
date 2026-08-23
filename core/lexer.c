@@ -10,7 +10,8 @@ typedef enum {
 	TOKEN_JMP,
 	TOKEN_LOOP,
 	TOKEN_VAR,
-	TOKEN_DEC
+	TOKEN_DEC,
+	TOKEN_IDENT
 } TokenList;
 
 typedef struct {
@@ -19,9 +20,16 @@ typedef struct {
 } TokenVaribleType;
 
 TokenList get_keyword () {
-	//Keyword enum conventer
+	if (strcmp(str, "ARITH") == 0) return TOKEN_ARITH;
+    if (strcmp(str, "JMP") == 0)   return TOKEN_JMP;
+    if (strcmp(str, "LOOP") == 0)  return TOKEN_LOOP;
+    if (strcmp(str, "VAR") == 0)   return TOKEN_VAR;
+    if (strcmp(str, "DEC") == 0)   return TOKEN_DEC;
+    return TOKEN_IDENT;
 }
 
 TokenVaribleType lexer () {
-	for (int c = 0; metin[i] = '\0')
+	for (int c = 0; input[c] != '\0'; i++) {
+		
+	}
 }
