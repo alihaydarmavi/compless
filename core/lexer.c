@@ -19,7 +19,7 @@ typedef struct {
 	char *codeelemnt;
 } TokenVaribleType;
 
-TokenList get_keyword () {
+TokenList get_keyword (char *str) {
 	if (strcmp(str, "ARITH") == 0) return TOKEN_ARITH;
     if (strcmp(str, "JMP") == 0)   return TOKEN_JMP;
     if (strcmp(str, "LOOP") == 0)  return TOKEN_LOOP;
@@ -29,6 +29,14 @@ TokenList get_keyword () {
 }
 
 TokenVaribleType lexer () {
+	int max = 2;
+	int numofelements = 0;
+
+	TokenList *tokenarray = (TokenList*) malloc(max * sizeof(TokenList));
+
+	if (max == numofelements) {
+		tokenarray = (TokenVaribleType*) realloc(tokenarray, max * sizeof(TokenVaribleType));
+	}
 	for (int c = 0; input[c] != '\0'; i++) {
 		
 	}
